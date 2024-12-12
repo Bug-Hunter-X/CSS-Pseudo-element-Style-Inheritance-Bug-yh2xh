@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon error where a pseudo-element is unexpectedly applying styles to an element it shouldn't affect.  The goal is to style only the first list item's marker, but the :before pseudo-element's styles bleed over to subsequent list items.
+
+```css
+ul li:first-of-type::before {
+  content: "*";
+  color: blue;
+  font-size: 2em;
+}
+```
