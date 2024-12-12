@@ -1,0 +1,10 @@
+The solution adds more specificity to the CSS selector to ensure that the styles only apply to the first list item's pseudo-element. This isolates the style application and prevents it from bleeding over to other elements.
+
+```css
+ul > li:first-of-type::before {
+  content: "*";
+  color: blue;
+  font-size: 2em;
+}
+```
+The addition of `ul >` improves specificity, restricting the rule's application to only list items that are direct children of the `<ul>` element.
